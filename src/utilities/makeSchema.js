@@ -24,6 +24,7 @@ const _makeOperationType = (operation, value) => (
 );
 
 const mergeableTypes = Object.values(typesMap);
+const userMergeableTypes = mergeableTypes.map(type => `User${type}`);
 
 const makeSchema = (definitions, schemaDefs) => {
   const operationMap = {
@@ -67,4 +68,4 @@ const makeSchema = (definitions, schemaDefs) => {
   };
 };
 
-export { mergeableTypes, makeSchema };
+export { userMergeableTypes as mergeableTypes, makeSchema };
